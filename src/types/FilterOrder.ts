@@ -1,6 +1,6 @@
 export enum FilterOrder {
-  ASC = "asc",
-  DESC = "desc",
-  CHEAPEST = "cheapest",
-  MOST_EXPENSIVE = "most_expensive",
+  MOST_RECENT = "Mais recente",
+  OLDEST = "Mais antigo",
+  HIGHEST_VALUE = "Maior valor",
+  LOWEST_VALUE = "Menor valor",
 }

@@ -1,5 +1,5 @@
 import { ReactNode } from "react";
-import { Text, TouchableOpacity, View } from "react-native";
+import { StyleProp, Text, TouchableOpacity, View, ViewStyle } from "react-native";
 import { styles } from "./styles";
 
 type ButtonProps = {
@@ -7,6 +7,7 @@ type ButtonProps = {
   icon?: ReactNode;
   backgroundColor: string;
   onPress?: () => void;
+  style?: StyleProp<ViewStyle>;
 };
 
 export function Button({
@@ -14,10 +15,11 @@ export function Button({
   icon,
   backgroundColor,
   onPress,
+  style,
 }: ButtonProps) {
   return (
     <TouchableOpacity
-      style={[styles.button, { backgroundColor }]}
+      style={[styles.button, { backgroundColor }, style]}
       onPress={onPress}
       activeOpacity={0.8}
     >
